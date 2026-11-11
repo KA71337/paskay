@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Запись на съёмки | PASSKYY</title>
+<meta name="description" content="Хочешь попасть в ролики PASSKYY? Заполни короткую анкету и отправь заявку на участие в съёмках.">
+<meta name="theme-color" content="#0e0e10">
+<link rel="icon" href="https://yt3.googleusercontent.com/XLujVjsl_aosVMzUqT5ZCve6i2ahQA-fE4VorJu-O4bkEqYTuOvpZIi2nrBOJMGZqpTYfzG2TQ=s160-c-k-c0x00ffffff-no-rj">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Запись на съёмки | PASSKYY">
+<meta property="og:description" content="Хочешь попасть в мои ролики? Оставляй заявку и присоединяйся к съёмкам!">
+<meta property="og:image" content="https://yt3.googleusercontent.com/XLujVjsl_aosVMzUqT5ZCve6i2ahQA-fE4VorJu-O4bkEqYTuOvpZIi2nrBOJMGZqpTYfzG2TQ=s160-c-k-c0x00ffffff-no-rj">
+<meta name="twitter:card" content="summary">
+<style>
+:root{
+  --bg:#0e0e10;--surface:#18181b;--surface-2:#202024;--line:#2c2c31;
+  --text:#f4f4f5;--muted:#a1a1aa;--accent:#ff4136;--accent-ink:#fff;--ok:#3ecf8e;
+  --r:14px;
+  font-family:"Inter","Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);line-height:1.5;overflow-x:hidden;min-height:100vh}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding-inline:clamp(16px,4vw,32px)}
+
+/* top bar */
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{font-weight:800;letter-spacing:.04em;text-decoration:none;font-size:18px}
+.social{display:flex;gap:4px;list-style:none;padding:0}
+.social a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--muted);transition:color .15s,transform .15s}
+.social a:hover{color:var(--text);transform:translateY(-2px)}
+.social svg{width:22px;height:22px;fill:currentColor}
+
+/* hero */
+.banner{margin-top:20px;border-radius:var(--r);overflow:hidden;background:var(--surface);aspect-ratio:1707/283;min-height:110px;position:relative}
+.banner img{width:100%;height:100%;object-fit:cover;object-position:center}
+.banner.fail::after{content:"PASSKYY";position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:28px;letter-spacing:.2em;color:var(--muted)}
+.channel{display:flex;gap:clamp(16px,3vw,28px);align-items:center;padding:28px 0 40px;flex-wrap:wrap}
+.avatar{width:clamp(88px,14vw,128px);aspect-ratio:1;border-radius:50%;background:var(--surface-2);border:1px solid var(--line);object-fit:cover;flex:none;display:grid;place-items:center;font-weight:800;font-size:32px;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.info{flex:1 1 320px;min-width:0}
+h1{font-size:clamp(34px,6vw,56px);line-height:1.05;letter-spacing:-.02em;font-weight:800}
+.lead{color:var(--muted);margin-top:10px;font-size:clamp(16px,2vw,19px);max-width:560px}
+.actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:10px;border:1px solid var(--line);background:var(--surface);text-decoration:none;font-weight:600;cursor:pointer;transition:background .15s,transform .15s,border-color .15s}
+.btn:hover{background:var(--surface-2);border-color:#3b3b42;transform:translateY(-1px)}
+.btn:active{transform:none}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:none}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-size:16px;padding:0 28px}
+.btn.primary:hover{background:#ff5a50;border-color:#ff5a50}
+.btn.big{min-height:56px;font-size:17px;width:100%}
+.btn[disabled]{opacity:.4;cursor:not-allowed;transform:none}
+
+/* terms */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;padding-bottom:56px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.fact b{display:block;font-size:13px;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.fact p{color:var(--muted);font-size:15px}
+
+/* form */
+#apply{padding:0 0 72px;scroll-margin-top:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,4vw,40px);max-width:760px;margin:0 auto}
+.progress{margin-bottom:28px}
+.progress-row{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:10px}
+.bar{height:6px;background:var(--surface-2);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:3px;transition:width .35s ease}
+.step{animation:in .3s ease both}
+.step.back{animation-name:inb}
+@keyframes in{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+@keyframes inb{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}
+h2{font-size:clamp(24px,4vw,32px);line-height:1.15;letter-spacing:-.01em;font-weight:800}
+.desc{color:var(--muted);margin-top:10px;font-size:16px}
+.choices{display:grid;gap:10px;margin-top:24px}
+.choice{display:flex;align-items:center;gap:14px;text-align:left;width:100%;min-height:64px;padding:14px 18px;background:var(--surface-2);border:1.5px solid var(--line);border-radius:12px;cursor:pointer;font-weight:600;font-size:16px;transition:border-color .15s,background .15s}
+.choice:hover{border-color:#4a4a52}
+.choice .dot{width:22px;height:22px;border-radius:50%;border:2px solid #55555d;flex:none;display:grid;place-items:center;transition:.15s}
+.choice[aria-checked="true"]{border-color:var(--accent);background:#241615}
+.choice[aria-checked="true"] .dot{border-color:var(--accent);background:var(--accent)}
+.choice[aria-checked="true"] .dot::after{content:"";width:8px;height:8px;border-radius:50%;background:#fff}
+.fields{display:grid;gap:16px;margin-top:24px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:6px}
+label em{font-style:normal;opacity:.7}
+input[type=text],input[type=number],textarea{width:100%;background:var(--surface-2);border:1.5px solid var(--line);border-radius:10px;padding:13px 14px;font-size:16px;transition:border-color .15s}
+input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+textarea{min-height:110px;resize:vertical}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg .choice{min-height:50px;width:auto;flex:1 1 140px;justify-content:center;padding:10px 14px}
+.err{color:#ff8a80;font-size:14px;margin-top:12px;min-height:20px}
+.nav{display:flex;gap:12px;justify-content:space-between;margin-top:20px}
+.nav .btn{flex:1 1 0}
+.nav .btn.primary{flex:2 1 0}
+
+/* final */
+.final{text-align:center}
+.check{width:64px;height:64px;border-radius:50%;background:var(--ok);display:grid;place-items:center;margin:0 auto 20px;animation:pop .45s cubic-bezier(.2,1.4,.4,1) both}
+.check svg{width:32px;height:32px;stroke:#0b2a1c;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:30;stroke-dashoffset:30;animation:draw .4s .25s ease forwards}
+@keyframes pop{from{transform:scale(.4);opacity:0}to{transform:none;opacity:1}}
+@keyframes draw{to{stroke-dashoffset:0}}
+.summary{text-align:left;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:16px;margin:24px 0 16px;font-family:ui-monospace,Consolas,monospace;font-size:14px;white-space:pre-wrap;word-break:break-word;color:#d4d4d8}
+.note{background:#1f1b12;border:1px solid #4a3d1c;color:#e6d3a0;border-radius:12px;padding:14px 16px;font-size:14px;text-align:left;margin-bottom:16px}
+.final .stack{display:grid;gap:10px}
+.link-btn{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;padding:12px;min-height:44px;font-size:14px}
+.status{min-height:22px;font-size:14px;color:var(--ok);margin-top:6px}
+
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:520px){
+  .row2{grid-template-columns:1fr}
+  .actions .btn{flex:1 1 100%}
+  .channel{padding:22px 0 30px}
+  .nav{flex-direction:column-reverse}
+  .nav .btn,.nav .btn.primary{flex:none;width:100%}
+  .banner{aspect-ratio:16/6}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">PASSKYY</a>
+    <ul class="social" aria-label="Социальные сети">
+      <li><a href="https://www.youtube.com/@passkyy" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+      <li><a href="https://t.me/petuks" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="banner" id="banner">
+      <img src="https://yt3.googleusercontent.com/N2HxAvAbZUHSx60-02ixlMESPs8SztDG9P2fQJH_s5UGQzKjvl05ExIFUaWrr_ZkMt2I3GNE5g=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" alt="Баннер канала PASSKYY" width="1707" height="283" fetchpriority="high">
+    </div>
+
+    <section class="channel">
+      <div class="avatar" id="avatar">
+        <img src="https://yt3.googleusercontent.com/XLujVjsl_aosVMzUqT5ZCve6i2ahQA-fE4VorJu-O4bkEqYTuOvpZIi2nrBOJMGZqpTYfzG2TQ=s160-c-k-c0x00ffffff-no-rj" alt="Аватарка PASSKYY" width="128" height="128">
+      </div>
+      <div class="info">
+        <h1>PASSKYY</h1>
+        <p class="lead">Хочешь попасть в мои ролики? Оставляй заявку и присоединяйся к съёмкам!</p>
+        <div class="actions">
+          <a class="btn primary" href="#apply" id="cta">Записаться на съёмки</a>
+          <a class="btn" href="https://www.youtube.com/@passkyy" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Смотреть канал</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="facts reveal" aria-label="Как это работает">
+      <div class="fact"><b>01 · Анкета</b><p>Три коротких шага: моды, голос и пара слов о тебе.</p></div>
+      <div class="fact"><b>02 · Заявка</b><p>Ответы собираются в готовое сообщение для Telegram.</p></div>
+      <div class="fact"><b>03 · Съёмки</b><p>PASSKYY смотрит заявки и приглашает подходящих игроков.</p></div>
+    </section>
+
+    <section id="apply" class="reveal" aria-labelledby="apply-title">
+      <div class="card">
+        <div class="progress" id="progress">
+          <div class="progress-row"><span id="stepLabel">Шаг 1 из 3</span><span id="pct">0%</span></div>
+          <div class="bar" role="progressbar" aria-labelledby="stepLabel" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="fill"></i></div>
+        </div>
+        <div id="stage" aria-live="polite"></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© PASSKYY</span>
+    <span>Заявки принимаются в Telegram <a href="https://t.me/petuks" target="_blank" rel="noopener noreferrer">@petuks</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var TG_USER="petuks", TG_URL="https://t.me/petuks", KEY="passkyy_application_v1";
+  var TOTAL=3;
+  var state={step:0,mods:"",voice:"",nick:"",age:"",exp:"",about:"",done:false};
+
+  var stage=document.getElementById("stage");
+  var fill=document.getElementById("fill");
+  var pct=document.getElementById("pct");
+  var label=document.getElementById("stepLabel");
+  var bar=document.querySelector(".bar");
+  var progress=document.getElementById("progress");
+
+  /* storage (may be unavailable) */
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+  function load(){try{var s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&typeof s==="object"){for(var k in state){if(k in s)state[k]=s[k]}}}catch(e){}}
+  load();
+  if(!(state.step>=0&&state.step<=TOTAL))state.step=0;
+
+  /* helpers */
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+  function choiceBtn(name,value,text,cur){
+    return '<button type="button" class="choice" role="radio" aria-checked="'+(cur===value)+'" data-name="'+name+'" data-value="'+esc(value)+'"><span class="dot"></span><span>'+esc(text)+'</span></button>';
+  }
+  function setProgress(){
+    var shown=Math.min(state.step+1,TOTAL);
+    var p=state.step>=TOTAL?100:Math.round(state.step/TOTAL*100);
+    fill.style.width=p+"%";pct.textContent=p+"%";bar.setAttribute("aria-valuenow",p);
+    label.textContent=state.step>=TOTAL?"Готово":"Шаг "+shown+" из "+TOTAL;
+  }
+
+  /* steps */
+  function stepHTML(i){
+    if(i===0)return '<h2 id="apply-title">Готов ли ты скачать моды для съёмок?</h2>'+
+      '<p class="desc">Для записи роликов могут потребоваться специальные модификации Minecraft. Необходимые файлы предоставляются для съёмочного процесса. Ты можешь самостоятельно проверить их любым антивирусом перед запуском.</p>'+
+      '<div class="choices" role="radiogroup" aria-label="Моды">'+
+      choiceBtn("mods","Да","Да, готов скачать моды.",state.mods)+
+      choiceBtn("mods","Нет","Нет, не готов.",state.mods)+'</div>';
+    if(i===1)return '<h2>Готов ли ты сниматься со своим голосом?</h2>'+
+      '<p class="desc">Во время съёмок важно общаться с другими участниками и записывать голос для роликов.</p>'+
+      '<div class="choices" role="radiogroup" aria-label="Голос">'+
+      choiceBtn("voice","Да","Да, без проблем!",state.voice)+
+      choiceBtn("voice","Нет","Нет, не хочу использовать микрофон.",state.voice)+'</div>';
+    return '<h2>Расскажи немного о себе</h2><p class="desc">Все поля на этом шаге необязательные — заполни то, что считаешь нужным.</p>'+
+      '<div class="fields">'+
+      '<div class="row2"><div><label for="f-nick">Игровой никнейм <em>(необязательно)</em></label><input id="f-nick" type="text" maxlength="32" autocomplete="off" value="'+esc(state.nick)+'"></div>'+
+      '<div><label for="f-age">Возраст <em>(необязательно)</em></label><input id="f-age" type="number" inputmode="numeric" min="5" max="99" value="'+esc(state.age)+'"></div></div>'+
+      '<div><label id="l-exp">Есть ли опыт съёмок? <em>(необязательно)</em></label><div class="seg" role="radiogroup" aria-labelledby="l-exp">'+
+      choiceBtn("exp","Есть","Есть",state.exp)+choiceBtn("exp","Нет","Нет",state.exp)+'</div></div>'+
+      '<div><label for="f-about">Дополнительная информация <em>(необязательно)</em></label><textarea id="f-about" maxlength="600">'+esc(state.about)+'</textarea></div>'+
+      '</div>';
+  }
+
+  var dir="";
+  function render(){
+    setProgress();
+    if(state.step>=TOTAL){progress.style.display="none";renderFinal();return}
+    progress.style.display="";
+    var last=state.step===TOTAL-1;
+    stage.innerHTML='<div class="step '+dir+'">'+stepHTML(state.step)+
+      '<p class="err" id="err" role="alert"></p>'+
+      '<div class="nav">'+
+      (state.step>0?'<button type="button" class="btn" id="back">Назад</button>':'')+
+      '<button type="button" class="btn primary" id="next">'+(last?"Завершить":"Далее")+'</button></div></div>';
+    document.getElementById("next").onclick=next;
+    var b=document.getElementById("back");if(b)b.onclick=back;
+    dir="";
+  }
+
+  function collect(){
+    if(state.step===2){
+      state.nick=document.getElementById("f-nick").value.trim();
+      state.age=document.getElementById("f-age").value.trim();
+      state.about=document.getElementById("f-about").value.trim();
+    }
+  }
+  function next(){
+    collect();
+    var err=document.getElementById("err");
+    if(state.step===0&&!state.mods){err.textContent="Выбери один из вариантов, чтобы продолжить.";return}
+    if(state.step===1&&!state.voice){err.textContent="Выбери один из вариантов, чтобы продолжить.";return}
+    if(state.step===2&&state.age!==""){var a=Number(state.age);if(!(a>=5&&a<=99)){err.textContent="Укажи возраст числом от 5 до 99 или оставь поле пустым.";return}}
+    state.step++;save();render();focusStage();
+  }
+  function back(){collect();if(state.step>0){state.step--;dir="back";save();render();focusStage()}}
+  function focusStage(){var t=document.getElementById("apply");var r=t.getBoundingClientRect();if(r.top<0||r.top>window.innerHeight*0.5)t.scrollIntoView({behavior:"smooth",block:"start"})}
+
+  stage.addEventListener("click",function(e){
+    var c=e.target.closest(".choice");if(!c)return;
+    var n=c.dataset.name,v=c.dataset.value;
+    if(n==="exp"&&state.exp===v){state[n]="";}else{state[n]=v}
+    collect();
+    var group=c.parentNode;
+    [].forEach.call(group.querySelectorAll(".choice"),function(x){x.setAttribute("aria-checked",String(state[n]===x.dataset.value))});
+    var err=document.getElementById("err");if(err)err.textContent="";
+    save();
+  });
+  stage.addEventListener("input",function(){collect();save()});
+
+  /* final */
+  function buildText(){
+    var L=["НОВАЯ ЗАЯВКА НА СЪЁМКИ PASSKYY","",
+      "Моды: "+(state.mods||"—"),
+      "Съёмки с голосом: "+(state.voice||"—"),
+      "Никнейм: "+(state.nick||"—"),
+      "Возраст: "+(state.age||"—"),
+      "Опыт: "+(state.exp||"—"),
+      "О себе: "+(state.about||"—")];
+    return L.join("\n");
+  }
+  function copyText(t){
+    if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t)}
+    return new Promise(function(res,rej){
+      var ta=document.createElement("textarea");ta.value=t;ta.style.cssText="position:fixed;opacity:0;top:0";
+      document.body.appendChild(ta);ta.select();
+      try{document.execCommand("copy")?res():rej()}catch(e){rej(e)}
+      document.body.removeChild(ta);
+    });
+  }
+  function renderFinal(){
+    var text=buildText();
+    stage.innerHTML='<div class="step final">'+
+      '<div class="check"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>'+
+      '<h2>Ты почти в команде!</h2>'+
+      '<p class="desc">Анкета заполнена. Теперь отправь свою заявку в Telegram, чтобы PASSKYY мог ознакомиться с твоими ответами.</p>'+
+      '<div class="summary" id="summary">'+esc(text)+'</div>'+
+      '<div class="note"><b>Важно:</b> сайт не отправляет заявку сам. Кнопка копирует текст и открывает чат с @'+TG_USER+' — вставь сообщение и нажми «Отправить» в Telegram. Пока ты этого не сделал, заявка не доставлена.</div>'+
+      '<div class="stack">'+
+      '<button type="button" class="btn primary big" id="send"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>Отправить заявку в Telegram</button>'+
+      '<button type="button" class="btn" id="copy">Скопировать заявку</button>'+
+      '<a class="btn" id="share" target="_blank" rel="noopener noreferrer" href="'+shareUrl(text)+'">Отправить через меню Telegram</a>'+
+      '</div>'+
+      '<p class="status" id="status" role="status"></p>'+
+      '<button type="button" class="link-btn" id="edit">Изменить ответы</button>'+
+      '<button type="button" class="link-btn" id="reset">Начать заново</button>'+
+      '</div>';
+    var st=document.getElementById("status");
+    document.getElementById("send").onclick=function(){
+      copyText(text).then(function(){
+        st.style.color="";st.textContent="Текст скопирован. В Telegram вставь его в чат и нажми «Отправить».";
+      },function(){
+        st.style.color="#ffb3ac";st.textContent="Не удалось скопировать автоматически — выдели текст выше и скопируй вручную.";
+      });
+      window.open(TG_URL,"_blank","noopener");
+    };
+    document.getElementById("copy").onclick=function(){
+      copyText(text).then(function(){st.style.color="";st.textContent="Заявка скопирована."},function(){st.style.color="#ffb3ac";st.textContent="Не удалось скопировать — выдели текст выше вручную."});
+    };
+    document.getElementById("edit").onclick=function(){state.step=TOTAL-1;dir="back";save();render()};
+    document.getElementById("reset").onclick=function(){state={step:0,mods:"",voice:"",nick:"",age:"",exp:"",about:"",done:false};save();render()};
+  }
+  function shareUrl(t){return "https://t.me/share/url?url="+encodeURIComponent(TG_URL)+"&text="+encodeURIComponent(t)}
+
+  /* image fallbacks */
+  var ban=document.querySelector("#banner img");
+  ban.addEventListener("error",function(){ban.style.display="none";document.getElementById("banner").classList.add("fail")});
+  var av=document.querySelector("#avatar img");
+  av.addEventListener("error",function(){av.style.display="none";document.getElementById("avatar").textContent="P"});
+
+  /* reveal on scroll */
+  var rv=document.querySelectorAll(".reveal");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.1});
+    rv.forEach(function(el){io.observe(el)});
+  }else{rv.forEach(function(el){el.classList.add("on")})}
+
+  render();
+})();
+</script>
+</body>
+</html>
